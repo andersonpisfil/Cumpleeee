@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cumpleaños de Andrea</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Las letras de ANDREA como botones -->
+        <div class="letters">
+            <span class="letter" onclick="showPopup('A')">A</span>
+            <span class="letter" onclick="showPopup('N')">N</span>
+            <span class="letter" onclick="showPopup('D')">D</span>
+            <span class="letter" onclick="showPopup('R')">R</span>
+            <span class="letter" onclick="showPopup('E')">E</span>
+            <span class="letter" onclick="showPopup('A')">A</span>
+        </div>
+
+        <!-- Imagen de carta -->
+        <div class="card">
+            <img src="https://via.placeholder.com/200x300" alt="Carta" onclick="showCardPopup()">
+        </div>
+
+    </div>
+
+    <!-- Popup para letras -->
+    <div id="letter-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">×</span>
+            <p id="popup-message"></p>
+        </div>
+    </div>
+
+    <!-- Popup para la carta -->
+    <div id="card-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeCardPopup()">×</span>
+            <p>¡Feliz Cumpleaños, Andrea! 🎉</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
