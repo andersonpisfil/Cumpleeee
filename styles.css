@@ -5,24 +5,69 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Waltograph';
+    src: url('fonts/SWEEHB__.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'LovelyFont';
+    src: url('fonts/Letras.otf') format('opentype');
+}
+
+.glow-text {
+    font-family: 'LovelyFont', cursive;
+    font-size: 6rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #ff8af2,
+            0 0 10px #ff7bd7,
+            0 0 15px #ff5fc1,
+            0 0 20px #ff3cab;
+    }
+
+    to {
+        text-shadow: 0 0 10px #ffa8f0,
+            0 0 20px #ff87dc,
+            0 0 30px #ff5fc1,
+            0 0 40px #ff3cab;
+    }
+}
+
+
+.container {
+    display: none;
+}
+
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: lo, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background:  #ffc0dd;
     text-align: center;
-    overflow: hidden; /* Para evitar desplazamientos cuando se abran los popups */
+    overflow: hidden;
+    /* Para evitar desplazamientos cuando se abran los popups */
 }
 
 /* Efecto de animación para las letras */
 .letters {
     font-size: 3rem;
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    /* <--- esto centra horizontalmente */
+    gap: 0.5rem;
     margin-bottom: 2rem;
-    animation: fadeIn 1s ease-out forwards; /* Animación para las letras al aparecer */
+    animation: fadeIn 1s ease-out forwards;
+    /* Animación para las letras al aparecer */
 }
 
 /* Animación de las letras */
@@ -31,6 +76,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -40,22 +86,38 @@ body {
 /* Estilo de las letras */
 .letter {
     cursor: pointer;
-    color: #3498db;
-    transition: transform 0.3s, color 0.3s; /* Efecto de transformación y color */
+    font-family: 'Waltograph', bold ;
+    color: #fdeaf2;
+    transition: transform 0.3s, color 0.3s;
+    /* Efecto de transformación y color */
 }
 
 .letter:hover {
-    transform: scale(1.2) rotate(10deg); /* Al hacer hover, las letras aumentan de tamaño y giran */
-    color: #e74c3c; /* Cambia de color al hacer hover */
+    transform: scale(1.2) rotate(10deg);
+    /* Al hacer hover, las letras aumentan de tamaño y giran */
+    color: #e74c3c;
+    /* Cambia de color al hacer hover */
 }
 
-/* Efecto de animación para la carta */
-.card img {
-    width: 150px;
+.card-container {
+    width: 200px;
+    height: 150px;
+    perspective: 1000px;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s; /* Añadimos sombra al hover */
-    animation: slideIn 1s ease-out forwards; /* Animación al aparecer la carta */
 }
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-open .card-image {
+    transform: rotateY(180deg);
+}
+
+
 
 /* Animación de la carta */
 @keyframes slideIn {
@@ -63,16 +125,13 @@ body {
         opacity: 0;
         transform: translateX(50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
-.card img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Añade sombra al hacer hover */
-}
 
 /* Estilo del popup */
 .popup {
@@ -85,7 +144,8 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    animation: fadeInPopup 0.5s ease-out forwards; /* Animación del popup */
+    animation: fadeInPopup 0.5s ease-out forwards;
+    /* Animación del popup */
 }
 
 @keyframes fadeInPopup {
@@ -93,6 +153,7 @@ body {
         opacity: 0;
         transform: scale(0.8);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -124,7 +185,8 @@ body {
 /* Popups con efectos */
 .popup-content p {
     font-size: 1.2rem;
-    animation: fadeInText 1s ease-out forwards; /* Animación para el texto del popup */
+    animation: fadeInText 1s ease-out forwards;
+    /* Animación para el texto del popup */
 }
 
 @keyframes fadeInText {
@@ -132,9 +194,126 @@ body {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+#balloons-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Para que no interfiera con los clics */
+    overflow: hidden;
+    z-index: 1;
+}
+
+.balloon {
+    position: absolute;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 50% 50% 45% 45%;
+    width: 50px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: floatUp 6s linear forwards;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    z-index: 2;
+}
+
+.balloon::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    width: 2px;
+    height: 30px;
+    background-color: #999;
+    transform: translateX(-50%);
+}
+
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-150px) scale(1.2);
+        opacity: 0;
+    }
+
+    from {
+        bottom: 0;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+.floating-image {
+    position: absolute;
+    width: 60px;
+    animation: floatImage 6s ease-in forwards;
+    z-index: 2;
+    pointer-events: none;
+    /* para no interferir con clics */
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(50vh) translateX(20px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(-150px) translateX(-20px) rotate(-10deg);
+        opacity: 0;
+    }
+}
+
+
+/*---CARTA--*/
+
+@keyframes shakeSideways {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    75% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Aplica animación al pasar el mouse */
+.shaky-card:hover {
+    animation: shakeSideways 0.5s ease-in-out;
+}

@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cumpleaños de Andrea</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
+    <!-- Popup de Bienvenida -->
+    <div id="start-popup" class="popup" style="display: flex;">
+        <div class="popup-content">
+            <p>¡Bienvenido al cumpleaños de Andrea! 🎉</p>
+            <button onclick="startExperience()">Comenzar</button>
+        </div>
+    </div>
+    <div id="balloons-container"></div>
+
+
 
     <div class="container">
+        <div>
+            <h1 class="glow-text">¡Feliz Cumpleaños!</h1>
+        </div>
+
         <!-- Las letras de ANDREA como botones -->
         <div class="letters">
             <span class="letter" onclick="showPopup('A')">A</span>
@@ -21,7 +40,7 @@
 
         <!-- Imagen de carta -->
         <div class="card">
-            <img src="https://via.placeholder.com/200x300" alt="Carta" onclick="showCardPopup()">
+            <img src="tarjeta.png" alt="Carta" class="shaky-card" onclick="showCardPopup()">
         </div>
 
     </div>
@@ -43,6 +62,12 @@
     </div>
 
     <script src="script.js"></script>
-</body>
-</html>
 
+    <audio id="bg-music" autoplay loop>
+        <source src="musica-cumple.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+</body>
+
+</html>
