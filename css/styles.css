@@ -8,12 +8,12 @@
 
 @font-face {
     font-family: 'Waltograph';
-    src: url('fonts/SWEEHB__.TTF') format('truetype');
+    src: url('../fonts/SWEEHB__.TTF') format('truetype');
 }
 
 @font-face {
     font-family: 'LovelyFont';
-    src: url('fonts/Letras.otf') format('opentype');
+    src: url('../cmfonts/Letras.otf') format('opentype');
 }
 
 .glow-text {
