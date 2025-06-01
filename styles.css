@@ -87,7 +87,7 @@ body {
 .letter {
     cursor: pointer;
     font-family: 'Waltograph', bold ;
-    color: #fdeaf2;
+    color: #ffffff;
     transition: transform 0.3s, color 0.3s;
     /* Efecto de transformación y color */
 }
@@ -103,19 +103,28 @@ body {
     width: 200px;
     height: 150px;
     perspective: 1000px;
-    cursor: pointer;
+    margin: 0 auto;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card-open {
+    transform: rotateY(180deg);
 }
 
 .card-image {
     width: 100%;
     height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border-radius: 10px;
 }
 
-.card-open .card-image {
-    transform: rotateY(180deg);
-}
+
 
 
 

@@ -23,6 +23,7 @@
 
 
 
+
     <div class="container">
         <div>
             <h1 class="glow-text">¡Feliz Cumpleaños!</h1>
@@ -39,9 +40,14 @@
         </div>
 
         <!-- Imagen de carta -->
-        <div class="card">
-            <img src="tarjeta.png" alt="Carta" class="shaky-card" onclick="showCardPopup()">
+        <!-- Imagen de carta con efecto de abrir -->
+        <div class="card-container" onclick="toggleCard()">
+            <div class="card-inner" id="card-inner">
+                <img src="tarjeta.png" alt="Carta" class="card-image">
+            </div>
         </div>
+
+
 
     </div>
 
@@ -55,9 +61,8 @@
 
     <!-- Popup para la carta -->
     <div id="card-popup" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closeCardPopup()">×</span>
-            <p>¡Feliz Cumpleaños, Andrea! 🎉</p>
+        <div class="popup-content" id="card-popup-content">
+            
         </div>
     </div>
 

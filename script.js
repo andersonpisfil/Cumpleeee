@@ -123,7 +123,7 @@ function launchFloatingImage() {
     const img = document.createElement("img");
     const images = ["kitty.png", "lazo.png", "fiesta.png", "enojon.png", "oso.png", "corazon.png", "rojo.png", "azul.png", "naranja.png"];
     const randomImage = images[Math.floor(Math.random() * images.length)];
-    img.src =randomImage; // Ajusta según la ubicación real
+    img.src = randomImage; // Ajusta según la ubicación real
     img.classList.add("floating-image");
 
     // Posición aleatoria
@@ -136,3 +136,45 @@ function launchFloatingImage() {
         img.remove();
     }, 6000);
 }
+
+function toggleCard() {
+    const card = document.getElementById("card-inner");
+    const popup = document.getElementById("card-popup");
+
+    // Gira la carta
+    card.classList.add("card-open");
+
+    // Agrega el contenido largo a la carta
+    const cardContent = document.getElementById("card-popup-content");
+    cardContent.innerHTML = `
+            <span class="close" onclick="closeCardPopup()">×</span>
+            <h2>¡Feliz Cumpleaños, Andrea! 🎉</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+            <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <p>¡Espero que este día esté lleno de amor, pastel y muchas sorpresas bonitas! 🎂🎈</p>
+        `;
+
+
+    // Muestra el popup
+    popup.style.display = "flex";
+
+    // Confetti 🎉
+    confetti({
+        particleCount: 600,
+        spread: 2000,
+        origin: { y: 0.6 }
+    });
+}
+
+
+function closeCardPopup() {
+    // Oculta el popup
+    document.getElementById("card-popup").style.display = "none";
+
+    // Regresa la carta a su posición original
+    const card = document.getElementById("card-inner");
+    card.classList.remove("card-open");
+}
+
+
+
