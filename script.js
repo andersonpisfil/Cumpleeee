@@ -121,7 +121,7 @@ function launchFloatingImage() {
     const container = document.getElementById("balloons-container");
 
     const img = document.createElement("img");
-    const images = ["kitty.png", "lazo.png", "fiesta.png", "enojon.png", "oso.png", "corazon.png", "rojo.png", "azul.png", "naranja.png"];
+    const images = ["img/kitty.png", "img/lazo.png", "img/fiesta.png", "img/enojon.png", "img/oso.png", "img/corazon.png", "img/rojo.png", "img/azul.png"];
     const randomImage = images[Math.floor(Math.random() * images.length)];
     img.src = randomImage; // Ajusta según la ubicación real
     img.classList.add("floating-image");
