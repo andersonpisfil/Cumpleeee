@@ -15,8 +15,13 @@
     <!-- Popup de Bienvenida -->
     <div id="start-popup" class="popup" style="display: flex;">
         <div class="popup-content welcome">
-            <p class="welcome-text">¡Bienvenida niña! 🎉</p>
+            <h1 class="welcome-text">¡Bienvenida niña! 🎉</p>
+            <br>
             <p class="welcome-text">Espero te guste la sorpresitaaa</p>
+            <p class="welcome-text">Instrucciones:</p>
+            <p class="welcome-text">1. Presiona cada letra de tu nombre</p>
+            <p class="welcome-text">2. Abre la cartita</p>
+            <p class="welcome-text">3. Al final de la cartita encotrarás el ultimo paso</p>
 
             <button class="start-button" onclick="startExperience()">Comenzar</button>
         </div>
@@ -27,6 +32,11 @@
 
 
     <div class="container">
+
+        <a id="ver-collage" href="collage.html" class="collage-button" style="display: none;">
+            🎞️ Ver recuerdos
+        </a>
+
         <div>
             <h1 class="glow-text">¡Feliz Cumpleaños!</h1>
         </div>
@@ -38,7 +48,7 @@
             <span class="letter" onclick="showPopup('D')">D</span>
             <span class="letter" onclick="showPopup('R')">R</span>
             <span class="letter" onclick="showPopup('E')">E</span>
-            <span class="letter" onclick="showPopup('A')">A</span>
+            <span class="letter" onclick="showPopup('A1')">A</span>
         </div>
 
         <!-- Imagen de carta -->
@@ -55,9 +65,9 @@
 
     <!-- Popup para letras -->
     <div id="letter-popup" class="popup">
-        <div class="popup-content">
+        <div class="popup-content welcome">
             <span class="close" onclick="closePopup()">×</span>
-            <p id="popup-message"></p>
+            <p id="popup-message" class="welcome-text"></p>
         </div>
     </div>
 

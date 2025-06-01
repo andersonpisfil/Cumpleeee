@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: #ffc0dd;
+    min-height: 100vh;
+}
+
+.collage-header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    font-family: 'Pacifico', cursive;
+    color: #d63384;
+}
+
+.collage-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.2rem;
+        animation: glow 1.5s ease-in-out infinite alternate;
+
+}
+
+.collage-header p {
+    font-size: 1.2rem;
+    color: #8a2f5a;
+        animation: glow 1.5s ease-in-out infinite alternate;
+
+}
+
+.collage-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.photo {
+    position: relative;
+    width: 200px;
+    transform: rotate(var(--angle));
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border: 8px solid white;
+    border-radius: 10px;
+
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #ff8af2,
+            0 0 10px #ff7bd7,
+            0 0 15px #ff5fc1,
+            0 0 20px #ff3cab;
+    }
+
+    to {
+        text-shadow: 0 0 10px #ffa8f0,
+            0 0 20px #ff87dc,
+            0 0 30px #ff5fc1,
+            0 0 40px #ff3cab;
+    }
+}
+
+
+.photo:hover {
+    transform: scale(1.05) rotate(var(--angle));
+    z-index: 2;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+.photo span {
+    display: block;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #b4005a;
+        animation: glow 1.5s ease-in-out infinite alternate;
+
+}

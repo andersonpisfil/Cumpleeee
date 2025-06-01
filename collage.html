@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collage de Recuerdos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="collage.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+
+<body>
+    <div class="collage-header">
+        <h1>🎉 Recuerditosss con Andreitaaa 🎉</h1>
+        <p>Sigue siendo la incrible chica que eresss, te quiero un montoon ❤️ </p>
+    </div>
+
+    <div class="collage-container">
+        
+        <div class="photo" style="--angle: 8deg;">
+            <img src="img/foto5.jpeg" alt="Recuerdo 2"><span>Comiendo anticuchitos 😋</span>
+        </div>
+        <div class="photo" style="--angle: -10deg;">
+            <img src="img/foto2.jpg" alt="Recuerdo 3"><span>Andreita y tu Hashika💕</span>
+        </div>
+        <div class="photo" style="--angle: 6deg;">
+            <img src="img/foto3.jpeg" alt="Recuerdo 4"><span>Andreita hincha del Boys</span>
+        </div>
+        <div class="photo" style="--angle: -7deg;">
+            <img src="img/foto4.jpeg" alt="Recuerdo 5"><span>Andreita en su primera chamba</span>
+        </div>
+        <div class="photo" style="--angle: 8deg;">
+            <video autoplay muted loop controls width="100%">
+                <source src="img/video1.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+            <span>En el Parque de las Leyendas 🐘</span>
+        </div>
+        <!-- Agrega más fotos si quieres -->
+    </div>
+
+<script>
+    // Lanza confeti aleatorio infinitamente
+    setInterval(() => {
+        confetti({
+            particleCount: 50,
+            angle: Math.random() * 360,
+            spread: 70,
+            origin: {
+                x: Math.random(),
+                y: Math.random() * 0.5
+            }
+        });
+    }, 300); // Cada 300 milisegundos
+</script>
+</body>
+
+</html>

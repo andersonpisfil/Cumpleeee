@@ -4,19 +4,22 @@ function showPopup(letter) {
 
     switch (letter) {
         case 'A':
-            popupMessage = "¡La letra A! Es la primera de todas.";
+            popupMessage = "Auténtica, porque siempre eres tu misma.";
             break;
         case 'N':
-            popupMessage = "¡La letra N! El sonido de 'naranja'.";
+            popupMessage = "Noble, porque siempre ayuda a todos.";
             break;
         case 'D':
-            popupMessage = "¡La letra D! Como en 'Dulce'.";
+            popupMessage = "Dinamita, sí como la canción porque siempre tienes buenas vibrass (Alma Dinamita).";
             break;
         case 'R':
-            popupMessage = "¡La letra R! Es la que da ritmo.";
+            popupMessage = "Rebelde, jajaj porque me siempre me das la contra.";
             break;
         case 'E':
-            popupMessage = "¡La letra E! El inicio de muchas palabras hermosas.";
+            popupMessage = "Especial, porque para mí lo eres y demasiado.";
+            break;
+        case 'A1':
+            popupMessage = "Amazing, porque eres una chica increiblee (un poquito de ingles jiji).";
             break;
         default:
             popupMessage = "¡Letra misteriosa!";
@@ -55,11 +58,11 @@ function closeCardPopup() {
 
 function launchConfetti() {
     confetti({
-      particleCount: 600,
-      spread: 1000,
-      origin: { y: 0.6 }
+        particleCount: 600,
+        spread: 1000,
+        origin: { y: 0.6 }
     });
-  }
+}
 
 
 function startExperience() {
@@ -165,21 +168,26 @@ function toggleCard() {
         <br>
         Quiero empezar esta cartita agradeciéndole a Dios quien sé que después de habérselo pedido tanto me permite hoy estar presente este día tan especial para ti y eso me hace aún más feliz, creo que también estaba ansioso porque llegue este día.
         <br><br>
-        Pero bueno, esta cartita es especialmente para celebrar tu día, un año más de vida, un año más en el que el mundo puede disfrutar de Andreita. Es un honor muy grande haberte conocido y que sigas formando parte de mi vida.
+        Pero bueno, esta cartita es especialmente para celebrar tu día, un año más de vida, un año más en el que el mundo puede disfrutar de Andreita. Y para mi es un honor muy grande haberte conocido y que sigas formando parte de mi vida.
         <br><br>
         Te admiro muchísimo, pero un montón realmente. Aunque no lo creas he aprendido y sigo aprendiendo muchas cosas lindas y buenas de ti. Para mí eres una personita de luz que va iluminando todo a su paso. Admiro el gran corazón que tienes con todo el mundo, admiro el cariño que le tienes a tu familia, admiro el esfuerzo que le pones a lo que haces. A pesar de que casi siempre tienes sueñito, lo sabes hacer a un lado y haces lo que te toca hacer, y lo mejor de todo es que todo lo que haces lo haces muy bien.
         <br><br>
         Y eso lo he pensado desde siempre, desde cuando recién te conocía unos meses y a las justas sabía tu nombre jajaja, pero aún así podía ver que eras una crack. Admiro tu forma de ver las cosas y la cercanía que tienes con Dios. Sinceramente me gusta mucho eso porque siento que me haces acercarme a Dios de nuevo, otra vez, como cuando era pequeño.
         <br><br>
-        Realmente eres una chica increíble y para mí la mejor del mundo, siempre te lo he dicho creo jijiji. De corazón deseo y le pido a Dios siempre todo lo bueno del mundo para ti porque realmente lo mereces. Hoy es un año más y sé que vendrán un montón de cositas buenas, lindasss.
+        Realmente eres una chica increíble y para mí la mejor del mundo, siempre te lo he dicho creo jijiji. De corazón deseo y le pido a Dios siempre pero siempe todo lo bueno del mundo para ti porque realmente lo mereces. Hoy es un año más y sé que vendrán un montón de cositas buenas, lindasss.
         <br><br>
-        En fin, te admiro muchísimo y gracias por ser la persona que eres. Gracias por haberme permitido entrar en tu vida. Siempre será mi mejor momento porque me motivas a ser el mejor chico del mundo para la mejor chica del mundo. Gracias por las alegrías, gracias por la paz que me das, gracias por tus enojos, gracias por haber sacado una versión mía que personalmente me encanta. Gracias por tantooo en realidad.
+        En fin, te admiro muchísimo y gracias por ser la persona que eres. Gracias por haberme permitido entrar en tu vida. Siempre será mi mejor momento porque me motivas a querer seguir intentando ser el mejor chico del mundo para la mejor chica del mundo. Gracias por las alegrías, gracias por la paz que me das, gracias por tus enojos, gracias por las risas, gracias por haber sacado una versión mía que personalmente me encanta, gracias por estar aquí. Gracias por tantooo en realidad.
         <br><br>
-        Así que feliz cumpleaños mi Andreitaaa. Deseo que logres toditossss tus sueños y que estés en un mundo donde todo sea de Kitty jijiji 🩷🎀.
+        Así que feliz cumpleaños mi Andreitaaa. Creo que a estas alturas sabes muy bien todo lo que significas para mi y todo lo que siento. Deseo que logres toditossss tus sueños y que estés en un mundo donde todo sea de Kitty, puedas comer tus papitas y que estes en tu camit todo el tiepo que quieras jijiji 🩷🎀.
+        <br><br>
+        (Ahora cuando cierres la cartita aparecerá un botón que nos llevará a algunos recuerdos tuyos jjiji)
     </p>
     </div>
 `;
 
+    // Mostrar ancla después de abrir la tarjeta
+    const enlace = document.getElementById("ver-collage");
+    enlace.style.display = "inline-block";
 
     // Muestra el popup
     popup.style.display = "flex";

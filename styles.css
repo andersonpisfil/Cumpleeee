@@ -395,3 +395,35 @@ body {
 .shaky-card:hover {
     animation: shakeSideways 0.5s ease-in-out;
 }
+
+.collage-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+    animation: fadeInTop 1s ease forwards;
+    margin-bottom: 10px;
+}
+
+.collage-button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff1493, #ff69b4);
+}
+
+/* Animación de aparición */
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
