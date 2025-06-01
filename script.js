@@ -147,12 +147,27 @@ function toggleCard() {
     // Agrega el contenido largo a la carta
     const cardContent = document.getElementById("card-popup-content");
     cardContent.innerHTML = `
-            <span class="close" onclick="closeCardPopup()">×</span>
-            <h2>¡Feliz Cumpleaños, Andrea! 🎉</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-            <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            <p>¡Espero que este día esté lleno de amor, pastel y muchas sorpresas bonitas! 🎂🎈</p>
-        `;
+    <span class="close" onclick="closeCardPopup()">×</span>
+    <h2 class="quicksand">¡Feliz Cumpleaños, Andrea! 🎉</h2>
+    
+    <div class="popup-scroll-text">
+    <p class="quicksand">
+        Quiero empezar esta cartita agradeciéndole a Dios quien sé que después de habérselo pedido tanto me permite hoy estar presente este día tan especial para ti y eso me hace aún más feliz, creo que también estaba ansioso porque llegue este día.
+        <br><br>
+        Pero bueno, esta cartita es especialmente para celebrar tu día, un año más de vida, un año más en el que el mundo puede disfrutar de Andreita. Es un honor muy grande haberte conocido y que sigas formando parte de mi vida.
+        <br><br>
+        Te admiro muchísimo, pero un montón realmente. Aunque no lo creas he aprendido y sigo aprendiendo muchas cosas lindas y buenas de ti. Para mí eres una personita de luz que va iluminando todo a su paso. Admiro el gran corazón que tienes con todo el mundo, admiro el cariño que le tienes a tu familia, admiro el esfuerzo que le pones a lo que haces. A pesar de que casi siempre tienes sueñito, lo sabes hacer a un lado y haces lo que te toca hacer, y lo mejor de todo es que todo lo que haces lo haces muy bien.
+        <br><br>
+        Y eso lo he pensado desde siempre, desde cuando recién te conocía unos meses y a las justas sabía tu nombre jajaja, pero aún así podía ver que eras una crack. Admiro tu forma de ver las cosas y la cercanía que tienes con Dios. Sinceramente me gusta mucho eso porque siento que me haces acercarme a Dios de nuevo, otra vez, como cuando era pequeño.
+        <br><br>
+        Realmente eres una chica increíble y para mí la mejor del mundo, siempre te lo he dicho creo jijiji. De corazón deseo y le pido a Dios siempre todo lo bueno del mundo para ti porque realmente lo mereces. Hoy es un año más y sé que vendrán un montón de cositas buenas, lindasss.
+        <br><br>
+        En fin, te admiro muchísimo y gracias por ser la persona que eres. Gracias por haberme permitido entrar en tu vida. Siempre será mi mejor momento porque me motivas a ser el mejor chico del mundo para la mejor chica del mundo. Gracias por las alegrías, gracias por la paz que me das, gracias por tus enojos, gracias por haber sacado una versión mía que personalmente me encanta. Gracias por tantooo en realidad.
+        <br><br>
+        Así que feliz cumpleaños mi Andreitaaa. Deseo que logres toditossss tus sueños y que estés en un mundo donde todo sea de Kitty jijiji 🩷🎀.
+    </p>
+    </div>
+`;
 
 
     // Muestra el popup

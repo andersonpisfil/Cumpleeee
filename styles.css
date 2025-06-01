@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
 /* Estilo global */
 * {
     margin: 0;
@@ -47,7 +48,7 @@
 
 
 body {
-    font-family: lo, sans-serif;
+    font-family: "Quicksand", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,10 +174,78 @@ body {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    width: 300px;
+    width: 400px;
     text-align: center;
     position: relative;
 }
+/* Personalización del popup de bienvenida */
+.popup-content.welcome {
+    background: linear-gradient(145deg, #ffe3f4, #ffc0dd);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+    animation: popup-fade 0.6s ease-out;
+    max-width: 400px;
+}
+
+.popup-scroll-text {
+    max-height: 500px; /* Altura visible antes del scroll */
+    overflow-y: auto;
+    padding-right: 10px; /* espacio para la scrollbar */
+    margin-bottom: 20px; /* espacio antes del botón */
+    text-align: left;
+    font-size: 1rem;
+}
+
+/* Opcional: personalizar scrollbar en navegadores Webkit */
+.popup-scroll-text::-webkit-scrollbar {
+    width: 8px;
+}
+.popup-scroll-text::-webkit-scrollbar-thumb {
+    background-color: #ff8ac4;
+    border-radius: 10px;
+}
+
+
+/* Animación de aparición más suave */
+@keyframes popup-fade {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.welcome-text {
+    font-family: 'Quicksand';
+    font-size: 2rem;
+    color: #d63384;
+    margin-bottom: 20px;
+    animation: fadeInText 1s ease-out;
+}
+
+/* Botón de empezar */
+.start-button {
+    background-color: #ff5fa2;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+}
+
+.start-button:hover {
+    background-color: #e60073;
+    transform: scale(1.05);
+}
+
 
 .close {
     font-size: 1.5rem;
