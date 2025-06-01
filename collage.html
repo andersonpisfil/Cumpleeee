@@ -8,21 +8,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="collage.css">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-
+</head>
 
 <body>
+
+        <!-- Popup de Bienvenida -->
+    <div id="start-popup" class="popup" style="display: flex;">
+        <div class="popup-content welcome">
+            <h1 class="welcome-text">Ahora, algunas fotitos 🎉</p>
+            <button class="start-button" onclick="startExperience()">Comenzar</button>
+        </div>
+    </div>
+    <div class="container">
     <div class="collage-header">
         <h1>🎉 Recuerditosss con Andreitaaa 🎉</h1>
         <p>Sigue siendo la incrible chica que eresss, te quiero un montoon ❤️ </p>
     </div>
 
     <div class="collage-container">
-        
+
         <div class="photo" style="--angle: 8deg;">
             <img src="img/foto5.jpeg" alt="Recuerdo 2"><span>Comiendo anticuchitos 😋</span>
         </div>
         <div class="photo" style="--angle: -10deg;">
-            <img src="img/foto2.jpg" alt="Recuerdo 3"><span>Andreita y tu Hashika💕</span>
+            <img src="img/foto2.jpg" alt="Recuerdo 3"><span>Andreita y su Hashika💕</span>
         </div>
         <div class="photo" style="--angle: 6deg;">
             <img src="img/foto3.jpeg" alt="Recuerdo 4"><span>Andreita hincha del Boys</span>
@@ -39,21 +48,46 @@
         </div>
         <!-- Agrega más fotos si quieres -->
     </div>
+    </div>
+    <audio id="bg-music" autoplay loop>
+        <source src="music2.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
 
 <script>
-    // Lanza confeti aleatorio infinitamente
-    setInterval(() => {
-        confetti({
-            particleCount: 50,
-            angle: Math.random() * 360,
-            spread: 70,
-            origin: {
-                x: Math.random(),
-                y: Math.random() * 0.5
-            }
+    window.onload = () => {
+        const music = document.getElementById("bg-music");
+        music.play().catch(err => {
+            console.log("Error al reproducir música:", err);
         });
-    }, 300); // Cada 300 milisegundos
+
+    setInterval(() => {
+            const screenWidth = window.innerWidth;
+    let particleCount = 100;
+
+    if (screenWidth < 768) {
+        // Para celulares o pantallas pequeñas
+        particleCount = 40;
+    } else if (screenWidth < 1024) {
+        // Para tablets
+        particleCount = 50;
+    }
+
+    confetti({
+        particleCount: particleCount,
+        angle: Math.random() * 360,
+        spread: 70,
+        origin: {
+            x: Math.random(),
+            y: Math.random() * 0.5
+        }
+    });
+    }, 1000); // o 2000 si quieres más lento
+    };
 </script>
+
+ <script src="script.js"></script>
 </body>
 
 </html>

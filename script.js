@@ -57,12 +57,28 @@ function closeCardPopup() {
 }
 
 function launchConfetti() {
+    const screenWidth = window.innerWidth;
+    let particleCount = 100;
+
+    if (screenWidth < 768) {
+        // Para celulares o pantallas pequeñas
+        particleCount = 40;
+    } else if (screenWidth < 1024) {
+        // Para tablets
+        particleCount = 50;
+    }
+
     confetti({
-        particleCount: 600,
-        spread: 1000,
-        origin: { y: 0.6 }
+        particleCount: particleCount,
+        angle: Math.random() * 360,
+        spread: 70,
+        origin: {
+            x: Math.random(),
+            y: Math.random() * 0.5
+        }
     });
 }
+
 
 
 function startExperience() {
@@ -92,8 +108,11 @@ function startExperience() {
     // Detener después de 10 segundos
     setTimeout(() => {
         clearInterval(imageInterval);
-    }, 10000000);
-    setInterval(launchConfetti, 3000);
+    }, 100000);
+    setInterval(() => {
+        launchConfetti();
+    }, 1000); // o 2000 si quieres más lento
+
 
 }
 
@@ -127,7 +146,7 @@ function startBalloons() {
     // Detener después de 10 segundos
     setTimeout(() => {
         clearInterval(interval);
-    }, 100000000);
+    }, 1000);
 }
 
 function launchFloatingImage() {
@@ -178,7 +197,7 @@ function toggleCard() {
         <br><br>
         En fin, te admiro muchísimo y gracias por ser la persona que eres. Gracias por haberme permitido entrar en tu vida. Siempre será mi mejor momento porque me motivas a querer seguir intentando ser el mejor chico del mundo para la mejor chica del mundo. Gracias por las alegrías, gracias por la paz que me das, gracias por tus enojos, gracias por las risas, gracias por haber sacado una versión mía que personalmente me encanta, gracias por estar aquí. Gracias por tantooo en realidad.
         <br><br>
-        Así que feliz cumpleaños mi Andreitaaa. Creo que a estas alturas sabes muy bien todo lo que significas para mi y todo lo que siento. Deseo que logres toditossss tus sueños y que estés en un mundo donde todo sea de Kitty, puedas comer tus papitas y que estes en tu camit todo el tiepo que quieras jijiji 🩷🎀.
+        Así que feliz cumpleaños mi Andreitaaa. Creo que a estas alturas sabes muy bien todo lo que significas para mi y todo lo que siento. Y te recuerdo que cuentas conmigo para todo todo todo lo que sea, ya sabes trabajo en equipo y almenos para mi somos un equipo jiji. Deseo que logres toditossss tus sueños y que estés en un mundo donde todo sea de Kitty, puedas comer tus papitas y que estes en tu camit todo el tiepo que quieras jijiji 🩷🎀.
         <br><br>
         (Ahora cuando cierres la cartita aparecerá un botón que nos llevará a algunos recuerdos tuyos jjiji)
     </p>
