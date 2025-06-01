@@ -53,6 +53,15 @@ function closeCardPopup() {
     document.getElementById("card-popup").style.display = "none";
 }
 
+function launchConfetti() {
+    confetti({
+      particleCount: 600,
+      spread: 1000,
+      origin: { y: 0.6 }
+    });
+  }
+
+
 function startExperience() {
     // Oculta el popup de inicio
     document.getElementById("start-popup").style.display = "none";
@@ -81,6 +90,7 @@ function startExperience() {
     setTimeout(() => {
         clearInterval(imageInterval);
     }, 10000000);
+    setInterval(launchConfetti, 3000);
 
 }
 
@@ -121,7 +131,7 @@ function launchFloatingImage() {
     const container = document.getElementById("balloons-container");
 
     const img = document.createElement("img");
-    const images = ["img/kitty.png", "img/lazo.png", "img/fiesta.png", "img/enojon.png", "img/oso.png", "img/corazon.png", "img/rojo.png", "img/azul.png"];
+    const images = ["img/kitty.png", "img/lazo.png", "img/lazo2.png", "img/fiesta.png", "img/enojon.png", "img/oso.png", "img/corazon.png", "img/rojo.png", "img/azul.png"];
     const randomImage = images[Math.floor(Math.random() * images.length)];
     img.src = randomImage; // Ajusta según la ubicación real
     img.classList.add("floating-image");
@@ -148,10 +158,11 @@ function toggleCard() {
     const cardContent = document.getElementById("card-popup-content");
     cardContent.innerHTML = `
     <span class="close" onclick="closeCardPopup()">×</span>
-    <h2 class="quicksand">¡Feliz Cumpleaños, Andrea! 🎉</h2>
+    <h2 class="quicksand">¡Felices 21 Andreitaa! 🐒🎉</h2>
     
     <div class="popup-scroll-text">
     <p class="quicksand">
+        <br>
         Quiero empezar esta cartita agradeciéndole a Dios quien sé que después de habérselo pedido tanto me permite hoy estar presente este día tan especial para ti y eso me hace aún más feliz, creo que también estaba ansioso porque llegue este día.
         <br><br>
         Pero bueno, esta cartita es especialmente para celebrar tu día, un año más de vida, un año más en el que el mundo puede disfrutar de Andreita. Es un honor muy grande haberte conocido y que sigas formando parte de mi vida.
