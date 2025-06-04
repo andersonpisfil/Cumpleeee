@@ -193,7 +193,7 @@ function toggleCard() {
         <br><br>
         Y eso lo he pensado desde siempre, desde cuando recién te conocía unos meses y a las justas sabía tu nombre jajaja, pero aún así podía ver que eras una crack. Admiro tu forma de ver las cosas y la cercanía que tienes con Dios. Sinceramente me gusta mucho eso porque siento que me haces acercarme a Dios de nuevo, otra vez, como cuando era pequeño.
         <br><br>
-        Realmente eres una chica increíble y para mí la mejor del mundo, siempre te lo he dicho creo jijiji. De corazón deseo y le pido a Dios siempre pero siempe todo lo bueno del mundo para ti porque realmente lo mereces. Hoy es un año más y sé que vendrán un montón de cositas buenas, lindasss.
+        Realmente eres una chica increíble y para mí la mejor del mundo, siempre te lo he dicho creo jijiji. De corazón deseo y le pido a Dios siempre pero siempre todo lo bueno del mundo para ti porque realmente lo mereces. Hoy es un año más y sé que vendrán un montón de cositas buenas, lindasss.
         <br><br>
         En fin, te admiro muchísimo y gracias por ser la persona que eres. Gracias por haberme permitido entrar en tu vida. Siempre será mi mejor momento porque me motivas a querer seguir intentando ser el mejor chico del mundo para la mejor chica del mundo. Gracias por las alegrías, gracias por la paz que me das, gracias por tus enojos, gracias por las risas, gracias por haber sacado una versión mía que personalmente me encanta, gracias por estar aquí. Gracias por tantooo en realidad.
         <br><br>
